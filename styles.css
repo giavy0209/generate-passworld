@@ -1,0 +1,135 @@
+:root {
+  --color-black: #202124;
+  --color-blue: #050f2e;
+  --color-light-blue: #091741;
+  --color-white: #fff;
+  --color-grey: #b6c6dc;
+  --color-gray: #57638b;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-grey);
+}
+
+#app {
+  background-color: var(--color-blue);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 800px;
+  max-width: 80%;
+}
+
+#app>div {
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+h6 {
+  color: var(--color-gray);
+}
+
+.box {
+  background-color: var(--color-light-blue);
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.result .box {
+  position: relative;
+  text-align: center;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.result #copy {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, .3);
+}
+
+#copy .tooltip {
+  position: absolute;
+  bottom: calc(100% + 30px);
+  right: 0;
+  background-color: rgba(255, 255, 255, .3);
+  padding: 10px;
+  border-radius: 10px;
+  transition: .3s;
+  opacity: 0;
+  pointer-events: none;
+  width: 600px;
+}
+
+#copy .tooltip.show {
+  bottom: calc(100% + 10px);
+  opacity: 1;
+  pointer-events: all;
+}
+
+#copy .tooltip::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, .3);
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: rgba(255, 255, 255, .3);
+  top: 100%;
+  background-color: transparent;
+  right: 10px;
+}
+
+
+
+.length .box {
+  display: flex;
+}
+
+.length .box input {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.setting .box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-generate {
+  border: none;
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
+  padding: 10px 20px;
+  margin-top: 40px;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  background: rgb(26, 118, 245);
+  background: linear-gradient(72deg, rgba(26, 118, 245, 1) 0%, rgba(74, 67, 234, 1) 50%, rgba(26, 118, 245, 1) 100%);
+  border-radius: 5px;
+  font-family: inherit;
+}
